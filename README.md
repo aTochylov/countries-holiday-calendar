@@ -17,12 +17,12 @@ An Angular 17.3 web application that displays information about countries and th
 Angular 17.3 requires Node.js version: >=18.x
 
 1. Clone the repository
+2. Execute next commands in project folder:
+* Install dependencies:
 
-2. Install dependencies:
+    npm ci
 
-    npm install
-
-3. Run the development server:
+* Run the development server:
 
     ng serve
 
