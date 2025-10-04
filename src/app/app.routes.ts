@@ -4,6 +4,6 @@ import { CountryComponent } from './pages/country/country.component';
 import { appRoutes } from './routes';
 
 export const routes: Routes = [
-    { path: appRoutes.home, component: HomeComponent },
-    { path: appRoutes.country.path, component: CountryComponent}
+  { path: appRoutes.home, component: HomeComponent },
+  { path: appRoutes.country.path, component: CountryComponent },
 ];

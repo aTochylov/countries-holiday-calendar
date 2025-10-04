@@ -20,7 +20,7 @@ export interface Holiday {
 export class CountryService {
   private baseApiUrl = import.meta.env.NG_APP_API_BASE_URL;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getCountries(): Observable<Country[]> {
     return this.http.get<Country[]>(`${this.baseApiUrl}/AvailableCountries`);

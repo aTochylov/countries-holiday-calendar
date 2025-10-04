@@ -1,23 +1,23 @@
 .year-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .holiday-header {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .holiday-type {
-    font-style: italic;
-    font-size: 0.9em;
+  font-style: italic;
+  font-size: 0.9em;
 }
 
 .back-button {
-    position: fixed;
-    top: 5rem;
-    left: 1rem;
-    z-index: 1000;
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 5rem;
+  left: 1rem;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }

@@ -2,21 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
-import { SearchFieldComponent } from "../../reusable-components/search-field/search-field.component";
+import { SearchFieldComponent } from '../../reusable-components/search-field/search-field.component';
 import { Country, CountryService } from '../../services/country.service';
-import { NavLinkComponent } from "../../reusable-components/nav-link/nav-link.component";
-import { CountriesWidgetComponent } from "./countries-widget/countries-widget.component";
+import { NavLinkComponent } from '../../reusable-components/nav-link/nav-link.component';
+import { CountriesWidgetComponent } from './countries-widget/countries-widget.component';
 import { appRoutes } from '../../routes';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    MatButtonModule, MatListModule, CommonModule,
+    MatButtonModule,
+    MatListModule,
+    CommonModule,
     SearchFieldComponent,
     NavLinkComponent,
-    CountriesWidgetComponent
-],
+    CountriesWidgetComponent,
+  ],
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
@@ -25,7 +27,7 @@ export class HomeComponent implements OnInit {
   allCountries: Country[] = [];
   filteredCountries: Country[] = [];
 
-  constructor(private countryService: CountryService) { }
+  constructor(private countryService: CountryService) {}
 
   ngOnInit() {
     this.countryService.getCountries().subscribe(countries => {

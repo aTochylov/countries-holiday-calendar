@@ -8,6 +8,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './nav-link.component.html',
 })
 export class NavLinkComponent {
-  @Input() displayText = "";
-  @Input() path: string = "";
+  @Input() displayText = '';
+  @Input() path: string = '';
 }

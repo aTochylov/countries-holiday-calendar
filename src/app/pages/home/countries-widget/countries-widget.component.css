@@ -1,17 +1,17 @@
 .widget {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 mat-card {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .country-header {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .holiday-name {
-    font-style: italic;
+  font-style: italic;
 }

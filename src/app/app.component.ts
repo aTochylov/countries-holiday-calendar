@@ -10,7 +10,7 @@ import { appRoutes } from './routes';
   standalone: true,
   imports: [RouterOutlet, RouterModule, MatToolbar, MatButtonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   homeRoute = appRoutes.home;

@@ -1,20 +1,25 @@
 <div class="container py-3">
-    <div class="row justify-content-between">
-        <div class="col col-8">
-            <div class="row">
-                <app-search-field (search)="onSearch($event)" class="d-flex justify-content-center"></app-search-field>
-            </div>
-            <div class="row">
-                <mat-list>
-                    <mat-list-item *ngFor="let country of filteredCountries" class="text-center">
-                        <app-nav-link [path]="countryRoute.to(country.countryCode)"
-                            [displayText]="country.name"/>
-                    </mat-list-item>
-                </mat-list>
-            </div>
-        </div>
-        <div class="col col-4">
-            <app-countries-widget class="d-flex justify-content-end"></app-countries-widget>
-        </div>
+  <div class="row justify-content-between">
+    <div class="col col-8">
+      <div class="row">
+        <app-search-field
+          (search)="onSearch($event)"
+          class="d-flex justify-content-center"
+        ></app-search-field>
+      </div>
+      <div class="row">
+        <mat-list>
+          <mat-list-item *ngFor="let country of filteredCountries" class="text-center">
+            <app-nav-link
+              [path]="countryRoute.to(country.countryCode)"
+              [displayText]="country.name"
+            />
+          </mat-list-item>
+        </mat-list>
+      </div>
     </div>
+    <div class="col col-4">
+      <app-countries-widget class="d-flex justify-content-end"></app-countries-widget>
+    </div>
+  </div>
 </div>

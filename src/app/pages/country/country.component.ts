@@ -13,7 +13,7 @@ import { appRoutes } from '../../routes';
   standalone: true,
   imports: [CommonModule, HttpClientModule, MatListModule, MatButtonModule, MatIcon, RouterLink],
   templateUrl: './country.component.html',
-  styleUrl: './country.component.css'
+  styleUrl: './country.component.css',
 })
 export class CountryComponent implements OnInit {
   homeRoute = appRoutes.home;
@@ -22,7 +22,10 @@ export class CountryComponent implements OnInit {
   years = Array.from({ length: 11 }, (_, i) => 2020 + i);
   holidays: Holiday[] = [];
 
-  constructor(private route: ActivatedRoute, private countryService: CountryService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private countryService: CountryService
+  ) {}
 
   ngOnInit() {
     this.countryCode = this.route.snapshot.paramMap.get('code')!;
@@ -35,7 +38,8 @@ export class CountryComponent implements OnInit {
   }
 
   loadHolidays(year: number) {
-    this.countryService.getPublicHolidays(this.countryCode, year)
-      .subscribe(holidays => this.holidays = holidays);
+    this.countryService
+      .getPublicHolidays(this.countryCode, year)
+      .subscribe(holidays => (this.holidays = holidays));
   }
 }
