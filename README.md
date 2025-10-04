@@ -20,7 +20,7 @@ Prerequisites: Angular 17.3 and Node.js version: >=18.x
 2. Execute next commands in project folder:
 * Install dependencies:
 
-    npm ci
+    npm install
 
 * Run the development server:
 
