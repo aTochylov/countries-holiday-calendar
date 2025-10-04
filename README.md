@@ -1,27 +1,57 @@
-# CountriesHolidayCalendar
+## Countries & Holidays
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+An Angular 17.3 web application that displays information about countries and their public holidays using the Nager.Date API https://date.nager.at/swagger/index.html
+.
 
-## Development server
+### Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Search for countries and view their holidays
 
-## Code scaffolding
+*  Country page with full holiday list and year switching 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*  Widget that shows 3 random countries and their upcoming holidays
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation & Setup
 
-## Running unit tests
+Angular 17.3 requires Node.js version: >=18.x
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository
 
-## Running end-to-end tests
+2. Install dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    npm install
 
-## Further help
+3. Run the development server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ng serve
+
+
+Open http://localhost:4200 in your browser.
+
+### Linting and Formatting
+Run ESLint: npm run lint
+
+Format code with Prettier: npm run format
+
+## Architecture Overview
+
+Uses standalone components (no NgModules)
+
+Each component encapsulates its logic and template
+
+Service layer (CountryService) handles all API calls and data transformation
+
+
+
+### External APIs Used
+
+Nager.Date API
+
+/AvailableCountries — list of countries
+
+/NextPublicHolidays/{countryCode} — next holiday
+
+/PublicHolidays/{year}/{countryCode} — holidays by year
+
+
