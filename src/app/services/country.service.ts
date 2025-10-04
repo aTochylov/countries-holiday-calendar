@@ -11,6 +11,7 @@ export interface Holiday {
   date: string;
   localName: string;
   name: string;
+  types: string[];
 }
 
 @Injectable({
@@ -26,8 +27,11 @@ export class CountryService {
   }
 
   getNextPublicHoliday(countryCode: string): Observable<Holiday[]> {
-    const year = new Date().getFullYear();
     const url = `https://date.nager.at/api/v3/NextPublicHolidays/${countryCode}`;
     return this.http.get<Holiday[]>(url);
+  }
+
+  getPublicHolidays(countryCode: string, year: number): Observable<Holiday[]> {
+    return this.http.get<Holiday[]>(`https://date.nager.at/api/v3/PublicHolidays/${year}/${countryCode}`);
   }
 }

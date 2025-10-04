@@ -1,0 +1,23 @@
+<a mat-button [routerLink]="['']" class="back-button">
+    <mat-icon>arrow_back</mat-icon>Back
+</a>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center my-3 year-buttons">
+            <button mat-stroked-button *ngFor="let y of years" [color]="y === currentYear ? 'primary' : undefined"
+                (click)="selectYear(y)">
+                {{ y }}
+            </button>
+        </div>
+    </div>
+    <div class="row  justify-content-center">
+        <mat-list class="col-8">
+            <mat-list-item *ngFor="let holiday of holidays">
+                <div class="holiday-header">
+                    {{ holiday.date | date:'mediumDate' }} - {{ holiday.localName }}
+                </div>
+                <div class="holiday-type">Type: {{ holiday.types.join(', ') || 'N/A' }}</div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>
