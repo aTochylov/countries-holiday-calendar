@@ -14,7 +14,7 @@ An Angular 17.3 web application that displays information about countries and th
 
 ## Installation & Setup
 
-Angular 17.3 requires Node.js version: >=18.x
+Prerequisites: Angular 17.3 and Node.js version: >=18.x
 
 1. Clone the repository
 2. Execute next commands in project folder:
@@ -42,6 +42,7 @@ Each component encapsulates its logic and template
 
 Service layer (CountryService) handles all API calls and data transformation
 
+Uses Angular Material and Bootstrap for styles
 
 
 ### External APIs Used
