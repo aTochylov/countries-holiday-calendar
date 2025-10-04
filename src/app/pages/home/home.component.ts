@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
@@ -19,9 +19,9 @@ import { appRoutes } from '../../routes';
 ],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   countryRoute = appRoutes.country;
-  
+
   allCountries: Country[] = [];
   filteredCountries: Country[] = [];
 
