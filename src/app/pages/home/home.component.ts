@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SearchFieldComponent } from "../../reusable-components/search-field/search-field.component";
 import { Country, CountryService } from '../../services/country.service';
 import { NavLinkComponent } from "../../reusable-components/nav-link/nav-link.component";
+import { CountriesWidgetComponent } from "./countries-widget/countries-widget.component";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import { NavLinkComponent } from "../../reusable-components/nav-link/nav-link.co
   imports: [
     MatButtonModule, MatListModule, CommonModule,
     SearchFieldComponent,
-    NavLinkComponent
+    NavLinkComponent,
+    CountriesWidgetComponent
 ],
   templateUrl: './home.component.html',
 })
