@@ -18,20 +18,20 @@ export interface Holiday {
   providedIn: 'root',
 })
 export class CountryService {
-  private apiUrl = 'https://date.nager.at/api/v3/AvailableCountries';
+  private baseApiUrl = import.meta.env.NG_APP_API_BASE_URL;
 
   constructor(private http: HttpClient) { }
 
   getCountries(): Observable<Country[]> {
-    return this.http.get<Country[]>(this.apiUrl);
+    return this.http.get<Country[]>(`${this.baseApiUrl}/AvailableCountries`);
   }
 
   getNextPublicHoliday(countryCode: string): Observable<Holiday[]> {
-    const url = `https://date.nager.at/api/v3/NextPublicHolidays/${countryCode}`;
+    const url = `${this.baseApiUrl}/NextPublicHolidays/${countryCode}`;
     return this.http.get<Holiday[]>(url);
   }
 
   getPublicHolidays(countryCode: string, year: number): Observable<Holiday[]> {
-    return this.http.get<Holiday[]>(`https://date.nager.at/api/v3/PublicHolidays/${year}/${countryCode}`);
+    return this.http.get<Holiday[]>(`${this.baseApiUrl}/PublicHolidays/${year}/${countryCode}`);
   }
 }
