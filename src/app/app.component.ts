@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +13,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'countries-holiday-calendar';
+  homeRoute = appRoutes.home;
 }

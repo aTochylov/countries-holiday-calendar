@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CountryService, Holiday } from '../../services/country.service';
+import { appRoutes } from '../../routes';
 
 @Component({
   selector: 'app-country-page',
@@ -15,6 +16,7 @@ import { CountryService, Holiday } from '../../services/country.service';
   styleUrl: './country.component.css'
 })
 export class CountryComponent implements OnInit {
+  homeRoute = appRoutes.home;
   countryCode!: string;
   currentYear = new Date().getFullYear();
   years = Array.from({ length: 11 }, (_, i) => 2020 + i);

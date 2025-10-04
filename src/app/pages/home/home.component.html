@@ -7,7 +7,7 @@
             <div class="row">
                 <mat-list>
                     <mat-list-item *ngFor="let country of filteredCountries" class="text-center">
-                        <app-nav-link [path]="['/country', country.countryCode]"
+                        <app-nav-link [path]="countryRoute.to(country.countryCode)"
                             [displayText]="country.name"/>
                     </mat-list-item>
                 </mat-list>

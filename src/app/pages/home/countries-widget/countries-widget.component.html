@@ -1,7 +1,7 @@
 <div class="widget">
     <mat-card *ngFor="let item of randomCountries()">
         <div class="country-header">
-            <app-nav-link [path]="['/country', item.country.countryCode]" [displayText]="item.country.name" /> - {{
+            <app-nav-link [path]="countryRoute.to(item.country.countryCode)" [displayText]="item.country.name" /> - {{
             item.holidayDate | date:'mediumDate' }}
         </div>
         <div class="holiday-name">{{ item.holidayName }}</div>

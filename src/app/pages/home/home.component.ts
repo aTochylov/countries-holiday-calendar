@@ -6,6 +6,7 @@ import { SearchFieldComponent } from "../../reusable-components/search-field/sea
 import { Country, CountryService } from '../../services/country.service';
 import { NavLinkComponent } from "../../reusable-components/nav-link/nav-link.component";
 import { CountriesWidgetComponent } from "./countries-widget/countries-widget.component";
+import { appRoutes } from '../../routes';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,8 @@ import { CountriesWidgetComponent } from "./countries-widget/countries-widget.co
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
+  countryRoute = appRoutes.country;
+  
   allCountries: Country[] = [];
   filteredCountries: Country[] = [];
 

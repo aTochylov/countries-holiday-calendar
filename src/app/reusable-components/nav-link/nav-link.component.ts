@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
 })
 export class NavLinkComponent {
   @Input() displayText = "";
-  @Input() path: string[] = []
+  @Input() path: string = "";
 }

@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { switchMap, map, forkJoin } from 'rxjs';
 import { Country, CountryService } from '../../../services/country.service';
 import { NavLinkComponent } from "../../../reusable-components/nav-link/nav-link.component";
+import { appRoutes } from '../../../routes';
 
 interface CountryHoliday {
     country: Country;
@@ -20,6 +21,8 @@ interface CountryHoliday {
     styleUrl: './countries-widget.component.css'
 })
 export class CountriesWidgetComponent implements OnInit {
+    countryRoute = appRoutes.country;
+    
     randomCountries = signal<CountryHoliday[]>([]);
 
     constructor(private countryService: CountryService) { }
